@@ -103,12 +103,14 @@ function mudController($scope,$http,$window,$timeout,$location,$routeParams,$roo
 	//Any change in the value will trigger a callback here
 	$scope.initMsgListener = function(){
 		var user_id = getCookie("user_id");
-		firebase.initializeApp({
-			apiKey: 'AIzaSyBn5s86pGyIY3EH5hSqenTL4AH0PhdXlZ8',
-			authDomain: 'multi-user-dungeon.firebaseapp.com',
-			projectId: 'multi-user-dungeon'
-		  });
-		  
+		if (!firebase.apps.length) {
+			firebase.initializeApp({
+				apiKey: 'AIzaSyBn5s86pGyIY3EH5hSqenTL4AH0PhdXlZ8',
+				authDomain: 'multi-user-dungeon.firebaseapp.com',
+				projectId: 'multi-user-dungeon'
+			});
+		}
+		 
 		var db = firebase.firestore();
 
 		db.collection("users").doc(user_id)
