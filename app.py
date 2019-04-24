@@ -213,29 +213,39 @@ def handleNavigationCommand(cmd, query):
     query -- The query string
     Returns: the status, room information, users in the room
     """
+    #Initialize some temporary variables
+    text = ""
+    progress = False#Check if the user has actually progressed or not in the end
+    negIndex = False
+    roomInfo = dict()
+    usersInRoom = list()
+    status = "success"
     if cmd == "up":#Move one position up
         query[0] += 1
     elif cmd == "down":#Move one position down
         if query[0]-1 >= 0:#Should always be greater than zero (no negative indexes)
             query[0] -= 1
+        else:
+            negIndex = True
     elif cmd == "north":#Move one position forward
         query[1] += 1
     elif cmd == "south":#Move one position backward
         if query[1]-1 >= 0:#Should always be greater than zero (no negative indexes)
             query[1] -= 1
+        else:
+            negIndex = True
     elif cmd == "east":#Move one position to right
         query[2] += 1
     elif cmd == "west":#Move one position to left
         if query[2]-1 >= 0:#Should always be greater than zero (no negative indexes)
             query[2] -= 1
-    world = session.get('world')
+        else:
+            negIndex = True
+    if negIndex == True:
+        roomInfo['text'] = "Umm...you cant make that move...try something else."
+        return "Progress Failed", roomInfo, usersInRoom
+    world = loadWorld(session.get("world_id"))
     old_location = session.get('user_location')
-    #Initialize some temporary variables
-    text = ""
-    progress = False#Check if the user has actually progressed or not in the end
-    roomInfo = dict()
-    usersInRoom = list()
-    status = "success"
     try:
         #Get the room info of the new room
         roomInfo = getRoomInfo(query, world["floors"])
@@ -277,7 +287,7 @@ def handleCommunicationCommand(cmd, cargs):
         if user in usersInRoom:#Check if the target user is in the same room (a user might leave the room at anytime)
             userRef = db.collection(u'users').document(user)
             userRef.update({"messages": ArrayUnion([{'from':session.get('user_id').decode('utf-8'), 'msg': msg, 'type': u'tell'}])})
-            return jsonify(status="success")
+            return jsonify(status="success", roomInfo={'text': 'message sent'})
         else:
             return jsonify(status="User Not Visible")
     elif cmd == "yell":#Send message to all the users in the world
@@ -289,7 +299,7 @@ def handleCommunicationCommand(cmd, cargs):
             user_id = user.id
             userRef = db.collection(u'users').document(user_id)
             userRef.update({"messages": ArrayUnion([{'from':session.get('user_id').decode('utf-8'), 'msg': msg, 'type': u'yell'}])})         
-        return jsonify(status="success")
+        return jsonify(status="success", roomInfo={'text': 'message sent'})
     elif cmd == "say":#Send message to all the users in the room
         if len(cargs) < 2:
             return jsonify(status="Command Not Found")
@@ -298,7 +308,7 @@ def handleCommunicationCommand(cmd, cargs):
         for user in usersInRoom:
             userRef = db.collection(u'users').document(user)
             userRef.update({"messages": ArrayUnion([{'from':session.get('user_id').decode('utf-8'), 'msg': msg, 'type': u'say'}])})
-        return jsonify(status="success")
+        return jsonify(status="success", roomInfo={'text': 'message sent'})
 
 
 def id_generator_lowercase(size=10, chars=string.ascii_lowercase):

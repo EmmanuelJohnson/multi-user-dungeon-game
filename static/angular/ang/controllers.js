@@ -118,6 +118,8 @@ function mudController($scope,$http,$window,$timeout,$location,$routeParams,$roo
 			var messages = doc.data().messages;
 			if (messages.length > 0){
 				var rm = messages[messages.length-1];
+				if(rm['from'] == getCookie('user_id'))
+					return;
 				$scope.$apply(function(){
 					var tmsg = "Traveller <i class='user'>"+rm['from']+"</i> "+rm['type']+"s, <b class='"+rm['type']+"'>'"+rm['msg']+"'</b>"
 					$scope.resp.push(tmsg);
