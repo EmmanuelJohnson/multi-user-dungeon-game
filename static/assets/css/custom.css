@@ -73,3 +73,18 @@ form{
     top:20px;
     right: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .col-6{
+        flex: none;
+        max-width: 100%;
+    }
+
+    .jumbotron p{
+        font-size: 12px;
+    }
+
+    form{
+        width: 90%;
+    }
+  }
