@@ -5,7 +5,7 @@
     "start": "101",
     "maxFloor": 3,
     "maxRoom": 2,
-    "intro": "World 1 Intro",
+    "intro": "You're sick of seeing the poor getting poorer and the disasters that has fallen on this earth. You are approached by an ancient mystic organization known as the 'CREED'. They posses the power to travel between the three reals namely Earth, Heaven and Hell. The followers of this mystic organization fight to balance peace in this world. They ask you to join their quest in bringing peace to the land. Are you up for the task? Type 'start' to begin your adventure brave warrior!",
     "floors":[
         {
             "id": "wf1",
