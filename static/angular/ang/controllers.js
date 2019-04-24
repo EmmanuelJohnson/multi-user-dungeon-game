@@ -22,6 +22,10 @@ function mudController($scope,$http,$window,$timeout,$location,$routeParams,$roo
 			if(resp.status == "success"){
 				$scope.resp.push(resp.intro);
 			}
+			else{
+				$(window).unbind('beforeunload');
+				window.location = "/";
+			}
 			$scope.scrollDown();
 		})
 		.error(function(response){
@@ -30,6 +34,8 @@ function mudController($scope,$http,$window,$timeout,$location,$routeParams,$roo
 	}
 
 	$scope.sendCommand = function(value){
+		if(value.trim() == "")
+			return;
 		$scope.cmd = '';
 		if(value == "start"){//Start the game
 			$scope.startGame();
@@ -141,7 +147,8 @@ function mudController($scope,$http,$window,$timeout,$location,$routeParams,$roo
 			if(resp == "success"){
 				$scope.resp.push("<b class='info'>Thank you for playing dungeon traps :)</b>");
 				setTimeout(function(){
-					$location.path('/');
+					$(window).unbind('beforeunload');
+					window.location = "/";
 				}, 2000);
 			}
 			else{

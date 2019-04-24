@@ -46,10 +46,14 @@ def load_world():
     data = json.loads(request.data.decode('utf-8'))
     worldId = data["worldId"]
     world = loadWorld(worldId)
+    if world is None:
+        return jsonify(status="error")
     session["world_id"] = worldId
     session['world'] = world
     resp = make_response(jsonify(status="success", intro = world["intro"]))
     resp.set_cookie('user_loc','', expires=0)
+    if "user_location" in session:
+        session.pop("user_location")
     return resp
 
 @app.route('/start-game', methods=['POST'])
