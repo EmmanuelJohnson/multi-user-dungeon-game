@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: python -u app.py
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=0
+    ports:
+      - 5000:5000

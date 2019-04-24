@@ -1,0 +1,75 @@
+body,html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("../images/bg.png");
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.game-title{
+    font-family: 'Press Start 2P', cursive;
+}
+
+form{
+    position: fixed;
+    bottom: 20px;
+    width: 97%;
+}
+
+.card{
+    width: 100%;
+    background-color: transparent;
+}
+
+.console{
+    font-family: "Courier New", Courier, monospace;
+    text-align: justify;
+    color: #00aa00;
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.console .info{
+    color:  #00aa00;
+}
+
+.console .msg{
+    color: #ffff00;
+}
+
+.console .user{
+    color: #ff0000;
+}
+
+.console .user-list{
+    color: #f0f;
+}
+
+.console .weapon{
+    color: #00b4ff;
+}
+
+.console .yell{
+    color: #ff7106;
+}
+
+.console .tell{
+    color: #0671ff;
+}
+
+.console .say{
+    color: #6a06ff;
+}
+
+.user-loc{
+    font-weight: 600;
+    color:#00aa00;
+    position: absolute;
+    top:20px;
+    right: 20px;
+}

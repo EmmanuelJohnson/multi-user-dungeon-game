@@ -1,0 +1,32 @@
+<div class="container-fluid" style="height:100vh;">
+    <div class="row h-100">
+        <div class="card">
+            <div class="card-body">
+                <div class="console">
+                    <p class="lead msg">Instructions</p>
+                    <p class="info">To begin the game, type the <i class="user">start</i> command</p>
+                    <p class="info">To exit the game, use the <i class="user">finish</i> command</p>
+                    <p class="info">You can move only through unlocked rooms (transparent)</p>
+                    <p class="info">Locked rooms are not accessible (solid)</p>
+                    <p class="lead msg">Navigation</p>
+                    <p class="user">up : <span class="info">Move one floor up</span></p>
+                    <p class="user">down : <span class="info">Move one floor down</span></p>
+                    <p class="user">north : <span class="info">Move towards front</span></p>
+                    <p class="user">south : <span class="info">Move towards back</span></p>
+                    <p class="user">east : <span class="info">Move towards right</span></p>
+                    <p class="user">west : <span class="info">Move towards left</span></p>
+                    <p class="lead msg">Interaction</p>
+                    <p class="user">say &lt;your message&gt; : <span class="info">To send message to everyone in the room</span></p>
+                    <p class="user">yell &lt;your message&gt; : <span class="info">To send message to everyone in the world</span></p>
+                    <p class="user">tell &lt;player name&gt; &lt;your message&gt; : <span class="info">To send message to specific user in the room</span></p>
+                    <p class="lead msg">World Intro</p>
+                    <p ng-repeat="r in resp track by $index" ng-bind-html="r"></p>
+                </div>
+                <form ng-submit="sendCommand(cmd)">
+                    <input type="text" placeholder="Enter start to begin the game" ng-model="cmd" class="form-control" autofocus/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="user-loc" ng-show="user_location">Room : {a user_location a}</div>

@@ -1,0 +1,505 @@
+{
+    "name": "The Bufj Khalifa",
+    "id": "world2",
+    "size": "5X3X3",
+    "start": "111",
+    "maxFloor": 5,
+    "maxRoom": 3,
+    "intro": "It's been your dream to travel the world and see the wonders of the world. Your travel brings you to Dubai to visit the Burj Khalifa, the tallest building in the world. You explore the vast floors of the building. Suddenly the building is heisted by a terrorist organization named 'TOXIC'. You are trapped with other guests and travellers. Explore the endless floors of the Burj Khalifa and try to escape from the holds of the terrorists. Good Luck!",
+    "floors":[
+        {
+            "id": "wf1",
+            "rooms":[
+                [
+                    {
+                        "id": "000",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "terrorist",
+                                "level": 1
+                            }
+                        ],
+                        "items":[]
+                    },
+                    {
+                        "id": "001",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "photo frame",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "002",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "flower vase",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "id": "010",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "weapon",
+                                "name": "AK-47",
+                                "level": 2,
+                                "isUsable": true,
+                                "role": "attack"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "011",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "012",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "MLB TAP SPORTS BASEBALL 2019 Poster",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "id": "020",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "021",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "Broken TV",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "022",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Elite Terrorist",
+                                "level": 2
+                            }
+                        ],
+                        "items":[]
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "wf2",
+            "rooms":[
+                [
+                    {
+                        "id": "100",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "101",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Elite Terrorist",
+                                "level": 2
+                            }
+                        ],
+                        "items":[]
+                    },
+                    {
+                        "id": "102",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "terrorist",
+                                "level": 1
+                            }
+                        ],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "110",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "weapon",
+                                "name": "Glock",
+                                "level": 1,
+                                "isUsable": true,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "111",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "112",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "terrorist",
+                                "level": 1
+                            }
+                        ],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "120",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "121",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Elite Terrorist",
+                                "level": 2
+                            }
+                        ],
+                        "items":[]
+                    },
+                    {
+                        "id": "122",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "wf3",
+            "rooms":[
+                [
+                    {
+                        "id": "200",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "201",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "Avengers End Game Tickets",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "202",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Armoured Terrorist",
+                                "level": 4
+                            }
+                        ],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "210",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "211",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "212",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "terrorist",
+                                "level": 1
+                            }
+                        ],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "220",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "221",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "Deer Statue",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "222",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "wf4",
+            "rooms":[
+                [
+                    {
+                        "id": "300",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "301",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "object",
+                                "name": "Cooking Dash Poster",
+                                "level": 0,
+                                "isUsable": false,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "302",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "310",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "311",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "weapon",
+                                "name": "Machine Gun",
+                                "level": 5,
+                                "isUsable": true,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "312",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "320",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "321",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "322",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "weapon",
+                                "name": "Deagle",
+                                "level": 2,
+                                "isUsable": true,
+                                "role": null
+                            }
+                        ]
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "wf5",
+            "rooms":[
+                [
+                    {
+                        "id": "400",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    },
+                    {
+                        "id": "401",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[
+                            {
+                                "type": "weapon",
+                                "name": "Bazooka",
+                                "level": 4,
+                                "isUsable": true,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "402",
+                        "type": "transparent",
+                        "monsters":[],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "410",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Armoured Terrorist",
+                                "level": 4
+                            }
+                        ],
+                        "items":[]
+                    },
+                    {
+                        "id": "411",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Boss Terrorist",
+                                "level": 5
+                            }
+                        ],
+                        "items":[
+                            {
+                                "type": "weapon",
+                                "name": "Baseball Bat",
+                                "level": 1,
+                                "isUsable": true,
+                                "role": null
+                            }
+                        ]
+                    },
+                    {
+                        "id": "412",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Armoured Terrorist",
+                                "level": 4
+                            }
+                        ],
+                        "items":[]
+                    }
+                ],
+                [
+                    {
+                        "id": "420",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Captain Terrorist",
+                                "level": 3
+                            }
+                        ],
+                        "items":[]
+                    },
+                    {
+                        "id": "421",
+                        "type": "transparent",
+                        "monsters":[
+                            {
+                                "type": "Captain Terrorist",
+                                "level": 3
+                            }
+                        ],
+                        "items":[]
+                    },
+                    {
+                        "id": "422",
+                        "type": "solid",
+                        "monsters":[],
+                        "items":[]
+                    }
+                ]
+            ]
+        }
+    ]
+}
