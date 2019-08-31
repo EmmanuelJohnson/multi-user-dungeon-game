@@ -4,7 +4,7 @@ EXPOSE 5000
 
 WORKDIR /app
 
-ENV GOOGLE_APPLICATION_CREDENTIALS multi-user-dungeon-firebase-adminsdk-fi2hw-4a23306b15.json
+ENV GOOGLE_APPLICATION_CREDENTIALS firebaseCredentials.json
 
 ADD requirements.txt /app
 
