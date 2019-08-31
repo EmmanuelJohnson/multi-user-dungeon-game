@@ -3,6 +3,7 @@
 <h3>How to deploy</h3>
 
 <p>Install Docker Community Edition</p>
+<p>Get your firebase credentials json file and rename it to firebaseCredentials.json and add it to the working directory</p>
 <p>Run the following command,</p>
 <ul>
   <li>docker run -d --restart always --name dungeon-trap -p 80:8000  gemmanuel/mud:latest</li>
