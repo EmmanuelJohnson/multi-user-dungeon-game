@@ -27,7 +27,7 @@ RUN pip install --ignore-installed -r requirements.txt
 COPY . /app
 
 # Set the environment variables
-ENV GOOGLE_APPLICATION_CREDENTIALS multi-user-dungeon-firebase-adminsdk-fi2hw-4a23306b15.json
+ENV GOOGLE_APPLICATION_CREDENTIALS firebaseCredentials.json
 
 # Expose port 8000 for uwsgi
 EXPOSE 8000
